@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <section class="calculadora">
+      <h1 class="h1">Calculadora</h1>
+      <p class="output" id="output-el">0</p>
+      <section class="buttons-section">
+        <button
+          class="button"
+          id="input7-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          7
+        </button>
+        <button
+          class="button"
+          id="input8-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          8
+        </button>
+        <button
+          class="button"
+          id="input9-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          9
+        </button>
+        <button
+          class="button"
+          id="inputdiv-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          /
+        </button>
+
+        <button
+          class="button"
+          id="input4-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          4
+        </button>
+        <button
+          class="button"
+          id="input5-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          5
+        </button>
+        <button
+          class="button"
+          id="input6-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          6
+        </button>
+        <button
+          class="button"
+          id="inputmult-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          *
+        </button>
+
+        <button
+          class="button"
+          id="input1-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          1
+        </button>
+        <button
+          class="button"
+          id="input2-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          2
+        </button>
+        <button
+          class="button"
+          id="input3-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          3
+        </button>
+        <button
+          class="button"
+          id="inputsub-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          -
+        </button>
+
+        <button
+          class="button"
+          id="input0-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          0
+        </button>
+        <button
+          class="button"
+          id="inputpoint-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          .
+        </button>
+        <button class="button" id="inputequal-btn" onclick="do_math()">
+          =
+        </button>
+        <button
+          class="button"
+          id="inputplus-btn"
+          onclick="button_pressed(this.textContent)"
+        >
+          +
+        </button>
+        <button class="button" id="inputC-btn" onclick="init_calculator()">
+          C
+        </button>
+        <button
+          class="button"
+          id="inputbackspace-btn"
+          onclick="erase_last_value()"
+        >
+          ←
+        </button>
+      </section>
+    </section>
+  </body>
+</html>

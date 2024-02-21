@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+  /* || COLOR */
+  --dark-dark-background-color: rgb(15, 32, 46);
+  --dark-background-color: #265073;
+  --light-background-color: #2d9596;
+  --dark-color: #9ad0c2;
+  --light-color: #f1fada;
+
+  --h-color: var(--dark-dark-background-color);
+  --body-background-image: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    var(--dark-background-color) 62%,
+    var(--light-background-color) 100%
+  );
+  --calculadora-background-color: var(--dark-color);
+  --output-background-color: rgb(38, 80, 115);
+  --output-color: var(--light-color);
+  --button-background-color: var(--light-color);
+  --button-color: var(--dark-background-color);
+
+  /* || BORDER */
+  --calculadora-border: 5px solid var(--light-color);
+  --calculadora-border-bottom-right: 5px solid
+    color-mix(in lch, var(--light-color), #000);
+
+  --calculadora-shadow: 5px 5px 5px black;
+}
+
+/* || STYLES */
+body {
+  background-image: var(--body-background-image);
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.calculadora {
+  background-color: var(--calculadora-background-color);
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  margin: 30vh auto;
+  padding: 10px;
+  width: 300px;
+  border: var(--calculadora-border);
+  border-bottom: var(--calculadora-border-bottom-right);
+  border-right: var(--calculadora-border-bottom-right);
+  border-radius: 16px;
+  box-shadow: var(--calculadora-shadow);
+}
+
+.calculadora h1 {
+  color: var(--h-color);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.output {
+  font-family: "Kode Mono", monospace;
+  font-size: 1.2rem;
+  text-align: right;
+  border-radius: 5px;
+  padding: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--output-background-color);
+  color: var(--output-color);
+  border-top: 3px solid var(--dark-dark-background-color);
+  border-left: 3px solid var(--dark-dark-background-color);
+}
+
+.buttons-section {
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-columns: minmax(50px, auto);
+  grid-template-areas:
+    "nc nbs ndiv nmult"
+    "n7 n8 n9 nsub"
+    "n4 n5 n6 nplus"
+    "n1 n2 n3 nplus"
+    "n0 n0 npoint nequal";
+}
+
+#inputC-btn {
+  grid-area: nc;
+}
+
+#inputbackspace-btn {
+  grid-area: nbs;
+}
+
+#inputdiv-btn {
+  grid-area: ndiv;
+}
+
+#inputmult-btn {
+  grid-area: nmult;
+}
+
+#inputsub-btn {
+  grid-area: nsub;
+}
+
+#input9-btn {
+  grid-area: n9;
+}
+
+#input8-btn {
+  grid-area: n8;
+}
+
+#input7-btn {
+  grid-area: n7;
+}
+
+#inputplus-btn {
+  grid-area: nplus;
+}
+
+#input4-btn {
+  grid-area: n4;
+}
+
+#input5-btn {
+  grid-area: n5;
+}
+
+#input6-btn {
+  grid-area: n6;
+}
+
+#input1-btn {
+  grid-area: n1;
+}
+
+#input2-btn {
+  grid-area: n2;
+}
+
+#input3-btn {
+  grid-area: n3;
+}
+
+#inputequal-btn {
+  grid-area: nequal;
+}
+
+#input0-btn {
+  grid-area: n0;
+}
+
+#inputpoint-btn {
+  grid-area: npoint;
+}
+
+.button {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-size: 1.5rem;
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border-radius: 7px;
+}
